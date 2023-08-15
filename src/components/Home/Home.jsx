@@ -4,6 +4,7 @@ import Typed from 'typed.js';
 import { Button } from '@material-tailwind/react';
 import { useEffect } from 'react';
 import AOS from 'aos';
+import cv from "../../assets/resume.pdf"
 
 const Home = () => {
     useEffect(() => {
@@ -19,7 +20,7 @@ const Home = () => {
 
     React.useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: ['<i>Junior</i> Frontend Developer.', '<i>Junior</i> React Developer.', '<i>Junior</i> MERN Stack Developer.',],
+            strings: [' Frontend Developer.', ' React Developer.', ' MERN Stack Developer.',],
             typeSpeed: 90,
             loop: 3,
         });
@@ -29,7 +30,7 @@ const Home = () => {
     }, []);
 
     // const handleDownload = () => {
-    //     const url = '/public/resume.pdf';
+    //     const url = '/src/assets/Resume of neela.pdf';
     //     const anchor = document.createElement("a");
     //     anchor.href = url;
     //     anchor.download = "resume.pdf";
@@ -42,18 +43,24 @@ const Home = () => {
                 <img src={img} />
             </div>
             <div className='mt-20'>
-                <h1 className='text-6xl font-bold text-purple-300'>
+                <h1 className='text-6xl font-bold text-blue-gray-800'>
                     <span ref={el}></span>
                 </h1>
 
-                <div>
+                {/* <div>
                     <a download href="https://drive.google.com/file/d/1GsU0Drg4orIk_h4CoOQNakyrnFGhSS_x/view?usp=drive_link">
                         <Button className='bg-purple-300 mt-14'>Resume</Button>
+                    </a>
+                </div> */}
+
+                <div>
+                    <a href={cv} download=''>
+                        <Button className='bg-blue-gray-800  mt-14'>Download Resume</Button>
                     </a>
                 </div>
 
                 {/* <Button className='bg-purple-300 mt-14' onClick={handleDownload}>
-                    Resume
+                    Resumesss
                 </Button> */}
 
             </div>

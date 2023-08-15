@@ -42,18 +42,18 @@ const Contact = () => {
                     <form ref={form} onSubmit={sendEmail} className=' flex flex-col gap-8'>
                         <label className="flex flex-col">
                             <span className='font-bold mb-4'>Your name</span>
-                            <input type="text" name="from_name" placeholder="Enter your name" className="bg-purple-50 py-4 px-6 placeholder-black rounded-lg outline-none border-none font-medium" />
+                            <input type="text" name="from_name" placeholder="Enter your name" className="bg-gray-100 py-4 px-6 placeholder-black rounded-lg outline-none border-none font-medium" />
                         </label>
                         <label className="flex flex-col">
                             <span className='font-bold mb-4'>Your Email</span>
-                            <input type="email" name="from_email" placeholder="Enter your Email" className="bg-purple-50 py-4 px-6 placeholder-black rounded-lg outline-none border-none font-medium" />
+                            <input type="email" name="from_email" placeholder="Enter your Email" className="bg-gray-100 py-4 px-6 placeholder-black rounded-lg outline-none border-none font-medium" />
                         </label>
                         <label className="flex flex-col">
                             <span className='font-bold mb-4'>Your Message</span>
-                            <textarea name="message" id="" cols="30" rows="7" placeholder="Enter your message" className="bg-purple-50 py-4 px-6 placeholder-black rounded-lg outline-none border-none font-medium"></textarea>
+                            <textarea name="message" id="" cols="30" rows="7" placeholder="Enter your message" className="bg-gray-100 py-4 px-6 placeholder-black rounded-lg outline-none border-none font-medium"></textarea>
                         </label>
 
-                        <input type="submit" value="Send" className="bg-purple-500 text-white py-4 px-6 rounded-lg outline-none border-none font-medium" />
+                        <input type="submit" value="Send" className="bg-blue-gray-900 text-white py-4 px-6 cursor-pointer rounded-lg outline-none border-none font-medium " />
                     </form>
                 </div>
             </div>

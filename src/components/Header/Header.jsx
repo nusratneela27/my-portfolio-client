@@ -76,12 +76,12 @@ const Header = () => {
 
     return (
         <>
-            <Navbar className="fixed top z-10 h-max max-w-full rounded-none py-2 px-2 lg:px-24 lg:py-4">
+            <Navbar className="fixed top z-10 h-max max-w-full rounded-none py-2 px-2 lg:px-24 lg:py-4 shadow-lg">
                 <div className="flex items-center justify-between text-blue-gray-900">
                     <Typography
                         as="a"
                         href="#"
-                        className="mr-4 cursor-pointer py-1.5 text-xl font-extrabold text-purple-500"
+                        className="mr-4 cursor-pointer py-1 text-3xl font-extrabold font-serif italic text-deep-purple-400"
                     >
                         Nusrat Jahan Neela
                     </Typography>
