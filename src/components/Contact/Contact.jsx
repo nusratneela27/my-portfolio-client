@@ -3,6 +3,7 @@ import img from '../../assets/Email.gif'
 import emailjs from '@emailjs/browser';
 import { useEffect } from 'react';
 import AOS from 'aos';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
     const form = useRef();
@@ -17,9 +18,11 @@ const Contact = () => {
         )
             .then((result) => {
                 console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+            },
+                toast.success('Email send'),
+                (error) => {
+                    console.log(error.text);
+                });
     };
 
     useEffect(() => {
@@ -57,6 +60,7 @@ const Contact = () => {
                     </form>
                 </div>
             </div>
+            <Toaster />
         </div>
     );
 };
