@@ -80,7 +80,7 @@ const Header = () => {
                 <div className="flex items-center justify-between text-blue-gray-900">
                     <Typography
                         as="a"
-                        href="#"
+                        href=""
                         className="mr-4 cursor-pointer py-1 text-3xl font-extrabold font-serif italic text-deep-purple-400"
                     >
                         Nusrat Jahan Neela

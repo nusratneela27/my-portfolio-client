@@ -42,11 +42,11 @@ const Contact = () => {
                     <form ref={form} onSubmit={sendEmail} className=' flex flex-col gap-8'>
                         <label className="flex flex-col">
                             <span className='font-bold mb-4'>Your name</span>
-                            <input type="text" name="from_name" placeholder="Enter your name" className="bg-gray-100 py-4 px-6 placeholder-black rounded-lg outline-none border-none font-medium" />
+                            <input type="text" name="user_name" placeholder="Enter your name" className="bg-gray-100 py-4 px-6 placeholder-black rounded-lg outline-none border-none font-medium" />
                         </label>
                         <label className="flex flex-col">
                             <span className='font-bold mb-4'>Your Email</span>
-                            <input type="email" name="from_email" placeholder="Enter your Email" className="bg-gray-100 py-4 px-6 placeholder-black rounded-lg outline-none border-none font-medium" />
+                            <input type="email" name="user_email" placeholder="Enter your Email" className="bg-gray-100 py-4 px-6 placeholder-black rounded-lg outline-none border-none font-medium" />
                         </label>
                         <label className="flex flex-col">
                             <span className='font-bold mb-4'>Your Message</span>
