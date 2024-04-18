@@ -5,7 +5,7 @@ import name from "../../assets/name.png";
 
 const Footer = () => {
   return (
-    <div className="px-16 md:px-40 py-10 flex justify-between items-center text-gray-800">
+    <section className="px-16 md:px-40 py-10 flex justify-between items-center text-gray-800">
       <div className="flex gap-4">
         <img height={20} width={200} src={name} alt="" />
         <h1 className="text-sm border-s-2 ps-2">
@@ -20,7 +20,7 @@ const Footer = () => {
           <FaLinkedin></FaLinkedin>
         </a>
       </p>
-    </div>
+    </section>
   );
 };
 
