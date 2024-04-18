@@ -28,24 +28,6 @@ const Header = () => {
         className="p-1 text-base font-bold"
       >
         <Link
-          to="/"
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          offset={-200}
-          duration={700}
-          className="flex cursor-pointer items-center"
-        >
-          Home
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 text-base font-bold"
-      >
-        <Link
           to="about"
           spy={true}
           smooth={true}

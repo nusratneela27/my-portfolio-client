@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div
       id="/"
-      className="grid grid-cols-1 lg:grid-cols-2 gap-5 px-16 md:px-40 pt-32 pb-12"
+      className="grid grid-cols-1 lg:grid-cols-2 gap-5 px-16 md:px-40 pt-44 pb-40"
     >
       <div
         className="m-auto"

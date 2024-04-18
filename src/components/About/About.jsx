@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "./About.css";
 import AOS from "aos";
 
 import html5 from "../../assets/skills/html5-c2c893de.svg";
@@ -31,7 +30,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="px-16 md:px-40 mt-20 mb-20 ">
+    <section id="about" className="px-16 md:px-40 mt-20 mb-56">
       <h1 className="text-4xl text-center font-light mb-6">About Me</h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 border border-gray-400 rounded-2xl px-10 py-20 text-gray-800">
         <div
