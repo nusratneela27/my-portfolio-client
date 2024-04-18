@@ -4,14 +4,31 @@ import home from "../../assets/projects/home.png";
 import languages from "../../assets/projects/languages.png";
 import { FaGithub } from "react-icons/fa";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import AOS from "aos";
+import { useEffect } from "react";
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
+
   return (
     <section id="projects" className="flex flex-col items-center m-20">
       <h1 className="text-4xl text-center font-light mb-6">Projects</h1>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-gray-800">
         {/* Home to go  */}
-        <div className="flex gap-10 lg:gap-20 items-center flex-col lg:flex-row border p-7 rounded-lg shadow-md ">
+        <div
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0"
+          className="flex gap-10 lg:gap-20 items-center flex-col lg:flex-row border p-7 rounded-lg shadow-md "
+        >
           <div className="flex-1 rounded-md lg:hidden">
             <img
               src={home}
@@ -54,7 +71,13 @@ const Projects = () => {
         </div>
 
         {/* Learning Camp */}
-        <div className="flex gap-10 lg:gap-20 items-center flex-col lg:flex-row border p-7 rounded-lg shadow-md">
+        <div
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="500"
+          data-aos-offset="0"
+          className="flex gap-10 lg:gap-20 items-center flex-col lg:flex-row border p-7 rounded-lg shadow-md"
+        >
           <div className="flex-1 rounded-md lg:hidden">
             <img
               src={languages}
@@ -97,7 +120,13 @@ const Projects = () => {
         </div>
 
         {/* toys */}
-        <div className="flex gap-10 lg:gap-20 items-center flex-col lg:flex-row border p-7 rounded-lg shadow-md">
+        <div
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="700"
+          data-aos-offset="0"
+          className="flex gap-10 lg:gap-20 items-center flex-col lg:flex-row border p-7 rounded-lg shadow-md"
+        >
           <div className="flex-1 rounded-md lg:hidden">
             <img
               src={toys}

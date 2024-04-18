@@ -37,6 +37,7 @@ const Contact = () => {
       AOS.refresh();
     };
   }, []);
+
   return (
     <section
       id="contact"
@@ -48,8 +49,8 @@ const Contact = () => {
           <div>
             <h1 className="text-4xl font-light mb-2">Get In Touch</h1>
             <p>
-              If you are interested to have a chat with me, please send me
-              message. I'd love to hear from you!
+              Would you like to communicate with me? If so, please send me a
+              note. I like hearing from you!
             </p>
           </div>
           <div className="space-y-3 text-xl">
@@ -79,8 +80,8 @@ const Contact = () => {
               <input
                 type="text"
                 name="user_name"
-                placeholder="Enter your name"
-                className="bg-gray-100 py-2 px-4 placeholder-black rounded-lg outline-none border-none font-medium"
+                placeholder="name"
+                className="bg-transparent py-2 px-4 placeholder-black border-b border-black border-block rounded-lg font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -88,8 +89,8 @@ const Contact = () => {
               <input
                 type="email"
                 name="user_email"
-                placeholder="Enter your Email"
-                className="bg-gray-100 py-2 px-4 placeholder-black rounded-lg outline-none border-none font-medium"
+                placeholder="email"
+                className="bg-transparent py-2 px-4 placeholder-black border-b border-black border-block rounded-lg font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -99,8 +100,8 @@ const Contact = () => {
                 id=""
                 cols="30"
                 rows="7"
-                placeholder="Enter your message"
-                className="bg-gray-100 py-2 px-4 placeholder-black rounded-lg outline-none border-none font-medium"
+                placeholder="message"
+                className="bg-transparent py-2 px-4 placeholder-black border-b border-black border-block rounded-lg font-medium"
               ></textarea>
             </label>
             <input
