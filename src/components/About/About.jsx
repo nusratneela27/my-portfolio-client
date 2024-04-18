@@ -56,8 +56,8 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div>
-          <h1 className="text-2xl font-semibold mb-2">Skills</h1>
+        <div className="space-y-2">
+          <h1 className="text-2xl font-semibold">Skills</h1>
           <div className="flex flex-wrap items-center">
             <h2 className="font-semibold underline mr-1">Web Technologies: </h2>
             <div className="flex items-center gap-1 border border-slate-200 rounded-sm px-1 m-[2px]">
