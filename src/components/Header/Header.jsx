@@ -63,24 +63,6 @@ const Header = () => {
         className="p-1 text-base font-bold"
       >
         <Link
-          to="skills"
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          offset={-200}
-          duration={700}
-          className="flex cursor-pointer items-center"
-        >
-          Skills
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 text-base font-bold"
-      >
-        <Link
           to="projects"
           spy={true}
           smooth={true}
@@ -113,7 +95,7 @@ const Header = () => {
 
   return (
     <>
-      <Navbar className="fixed top z-10 h-max max-w-full rounded-none py-2 px-2 lg:px-24 lg:py-4 shadow-lg">
+      <Navbar className="fixed top z-10 h-max max-w-full rounded-none py-2 px-2 lg:px-24 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography as="a" href="">
             <img height={20} width={400} src={name} alt="" />
