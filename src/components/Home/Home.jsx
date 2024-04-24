@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div
       id="/"
-      className="grid grid-cols-1 lg:grid-cols-2 gap-5 px-16 md:px-40 pt-44 pb-40"
+      className="grid grid-cols-1 lg:grid-cols-2 gap-5 px-10 pt-28 md:px-40 md:pt-44 pb-40"
     >
       <div
         className="m-auto"
@@ -30,11 +30,13 @@ const Home = () => {
       </div>
       <div className="mt-20">
         <h1 className="text-sm mb-2 italic">{"Hello, My name"}</h1>
-        <h1 className="text-4xl font-semibold">Nusrat Jahan Neela</h1>
+        <h1 className="text-3xl md:text-4xl font-semibold">
+          Nusrat Jahan Neela
+        </h1>
         <h2 className="text-xl italic mt-2">
           I design and build things for the web
         </h2>
-        <p className="text-justify mt-4 pe-10">
+        <p className="text-justify mt-4 md:pe-10">
           I'm a passionate web developer with a passion for JavaScript and a
           solid understanding of React.js. My goal is to make amazing user
           experiences. I use clear, effective code to make concepts come to

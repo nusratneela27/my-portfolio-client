@@ -18,7 +18,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="flex flex-col items-center m-20">
+    <section id="projects" className="flex flex-col items-center m-10 md:m-20">
       <h1 className="text-4xl text-center font-light mb-6">Projects</h1>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-gray-800">
         {/* Home to go  */}

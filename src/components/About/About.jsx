@@ -30,11 +30,11 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="px-16 md:px-40 mt-20 mb-56">
+    <section id="about" className="px-10 mb-28 md:px-40 md:mt-20 md:mb-56">
       <h1 className="text-4xl text-center font-light mb-6">About Me</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 border border-gray-400 rounded-2xl px-10 py-20 text-gray-800">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 border border-gray-400 rounded-2xl px-5 py-10 md:px-10 md:py-20 text-gray-800">
         <div
-          className="m-auto md:border-r-2 pe-5"
+          className="m-auto lg:border-r-2 lg:pe-5"
           data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-easing="ease-in-sine"
