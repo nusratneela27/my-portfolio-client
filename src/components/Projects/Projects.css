@@ -1,37 +1,27 @@
 .image-desktop {
-    width: 400px;
-    height: 250px;
-    border-radius: 10px;
-    overflow: hidden;
-    background-position: top;
-    transition: ease-in-out 4s;
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-position: top;
+  transition: ease-in-out 4s;
 }
 
 .home {
-    background: url('../../assets/projects/home.png');
-    background-size: cover;
+  background: url("../../assets/projects/home.png");
+  background-size: cover;
 }
 
 .languages {
-    background: url('../../assets/projects/languages.png');
-    background-size: cover;
+  background: url("../../assets/projects/languages.png");
+  background-size: cover;
 }
 
 .toys {
-    background: url('../../assets/projects/toys.png');
-    background-size: cover;
-}
-
-.chef {
-    background: url('../../assets/projects/chefs.png');
-    background-size: cover;
-}
-
-.jobs {
-    background: url('../../assets/projects/jobs.png');
-    background-size: cover;
+  background: url("../../assets/projects/toys.png");
+  background-size: cover;
 }
 
 .image-desktop:hover {
-    background-position: bottom;
+  background-position: bottom;
 }
