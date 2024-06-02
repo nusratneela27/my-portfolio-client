@@ -1,11 +1,11 @@
 import React from "react";
-import img from "../../assets/desktop.jpg";
+import img from "../../../assets/desktop.jpg";
 import { Button } from "@material-tailwind/react";
 import { useEffect } from "react";
 import AOS from "aos";
-import cv from "../../assets/resume.pdf";
+import cv from "../../../assets/resume.pdf";
 
-const Home = () => {
+const Banner = () => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -54,4 +54,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Banner;

@@ -1,23 +1,23 @@
 import { useEffect } from "react";
 import AOS from "aos";
 
-import html5 from "../../assets/skills/html5-c2c893de.svg";
-import css from "../../assets/skills/css3-8b31a8b3.svg";
-import tailwind from "../../assets/skills/tailwind-css-f83a39de.svg";
-import reactjs from "../../assets/skills/react-js-6b2531f8.svg";
-import nodejs from "../../assets/skills/node-js-6a6d9a42.svg";
-import expressjs from "../../assets/skills/express-js-1514c0ea.svg";
-import mongodb from "../../assets/skills/mongodb-f2c61865.svg";
-import javascript from "../../assets/skills/javascript-6e73ba73.svg";
-import bootstap from "../../assets/skills/bootstap.jpeg";
-import firebase from "../../assets/skills/firebase.png";
-import jwt from "../../assets/skills/jwt.png";
-import nextjs from "../../assets/skills/nextjs.png";
-import redux from "../../assets/skills/redux.png";
-import stripe from "../../assets/skills/stripe.png";
-import github from "../../assets/skills/github.png";
-import figma from "../../assets/skills/figma.jpg";
-import netlify from "../../assets/skills/netlify.jpg";
+import html5 from "../../../assets/skills/html5-c2c893de.svg";
+import css from "../../../assets/skills/css3-8b31a8b3.svg";
+import tailwind from "../../../assets/skills/tailwind-css-f83a39de.svg";
+import reactjs from "../../../assets/skills/react-js-6b2531f8.svg";
+import nodejs from "../../../assets/skills/node-js-6a6d9a42.svg";
+import expressjs from "../../../assets/skills/express-js-1514c0ea.svg";
+import mongodb from "../../../assets/skills/mongodb-f2c61865.svg";
+import javascript from "../../../assets/skills/javascript-6e73ba73.svg";
+import bootstap from "../../../assets/skills/bootstap.jpeg";
+import firebase from "../../../assets/skills/firebase.png";
+import jwt from "../../../assets/skills/jwt.png";
+import nextjs from "../../../assets/skills/nextjs.png";
+import redux from "../../../assets/skills/redux.png";
+import stripe from "../../../assets/skills/stripe.png";
+import github from "../../../assets/skills/github.png";
+import figma from "../../../assets/skills/figma.jpg";
+import netlify from "../../../assets/skills/netlify.jpg";
 
 const About = () => {
   useEffect(() => {

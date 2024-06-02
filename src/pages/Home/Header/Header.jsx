@@ -7,7 +7,7 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
-import name from "../../assets/name.png";
+import name from "../../../assets/name.png";
 
 const Header = () => {
   const [openNav, setOpenNav] = React.useState(false);

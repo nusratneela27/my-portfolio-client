@@ -8,17 +8,17 @@
 }
 
 .home {
-  background: url("../../assets/projects/home.png");
+  background: url("../../../assets/projects/home.png");
   background-size: cover;
 }
 
 .languages {
-  background: url("../../assets/projects/languages.png");
+  background: url("../../../assets/projects/languages.png");
   background-size: cover;
 }
 
 .toys {
-  background: url("../../assets/projects/toys.png");
+  background: url("../../../assets/projects/toys.png");
   background-size: cover;
 }
 

@@ -1,7 +1,7 @@
 import "./Projects.css";
-import toys from "../../assets/projects/project3.png";
-import home from "../../assets/projects/project1.png";
-import languages from "../../assets/projects/project2.png";
+import toys from "../../../assets/projects/project3.png";
+import home from "../../../assets/projects/project1.png";
+import languages from "../../../assets/projects/project2.png";
 import { FaGithub, FaRegArrowAltCircleRight } from "react-icons/fa";
 import AOS from "aos";
 import { useEffect, useState } from "react";
