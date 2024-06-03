@@ -127,9 +127,18 @@ const Projects = () => {
                   </a>
                 </div>
                 <Button
-                  variant="contained"
                   onClick={() => handleOpen(project)}
-                  className="flex items-center gap-x-2 border p-1 rounded-sm bg-cyan-500 bg-opacity-50 text-black"
+                  variant="contained"
+                  sx={{
+                    mt: 2,
+                    py: 1,
+                    background: "linear-gradient(to right, #64b5f6, #ba68c8)",
+                    color: "white",
+                    "&:hover": {
+                      background: "linear-gradient(to right, #ba68c8, #64b5f6)",
+                      color: "white",
+                    },
+                  }}
                 >
                   More Info
                 </Button>

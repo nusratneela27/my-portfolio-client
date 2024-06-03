@@ -5,6 +5,7 @@ import AOS from "aos";
 import toast, { Toaster } from "react-hot-toast";
 import { CiMail } from "react-icons/ci";
 import { FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { Button, TextField } from "@mui/material";
 
 const Contact = () => {
   const form = useRef();
@@ -44,7 +45,7 @@ const Contact = () => {
       className="flex flex-col w-full justify-center items-center m-auto pt-20 text-gray-800"
     >
       <h1 className="text-4xl text-center font-light mb-6">Contact</h1>
-      <div className="flex flex-col lg:flex-row items-center lg:space-x-6 space-y-6 lg:space-y-0 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg overflow-hidden bg-brown-50">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center lg:space-x-6 space-y-6 lg:space-y-0 w-full max-w-7xl p-8 sm:p-12 rounded-3xl shadow-lg overflow-hidden bg-brown-50">
         <div className="space-y-20">
           <div>
             <h1 className="text-4xl font-light mb-2">Get In Touch</h1>
@@ -73,42 +74,72 @@ const Contact = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className=" flex flex-col gap-8 rounded-lg p-10 bg-black bg-opacity-20 shadow-lg"
+            className=" flex flex-col gap-5 rounded-3xl p-10 bg-white bg-opacity-30 shadow-lg"
           >
-            <label className="flex flex-col">
-              <span className="font-bold mb-2">Your name</span>
-              <input
-                type="text"
-                name="user_name"
-                placeholder="name"
-                className="bg-transparent py-2 px-4 placeholder-black border-b border-black border-block rounded-lg font-medium"
-              />
-            </label>
-            <label className="flex flex-col">
-              <span className="font-bold mb-2">Your Email</span>
-              <input
-                type="email"
-                name="user_email"
-                placeholder="email"
-                className="bg-transparent py-2 px-4 placeholder-black border-b border-black border-block rounded-lg font-medium"
-              />
-            </label>
-            <label className="flex flex-col">
-              <span className="font-bold mb-2">Your Message</span>
-              <textarea
-                name="message"
-                id=""
-                cols="30"
-                rows="7"
-                placeholder="message"
-                className="bg-transparent py-2 px-4 placeholder-black border-b border-black border-block rounded-lg font-medium"
-              ></textarea>
-            </label>
-            <input
-              type="submit"
-              value="Send"
-              className="bg-blue-gray-900 text-white py-2 px-4 cursor-pointer rounded-lg outline-none border-none font-medium"
+            <TextField
+              id="name"
+              label="Name"
+              type="name"
+              autoComplete="name"
+              fullWidth
+              margin="normal"
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "&.Mui-focused fieldset": {
+                    borderColor: "black",
+                  },
+                },
+                width: "100%",
+              }}
             />
+            <TextField
+              id="email"
+              label="Email"
+              type="email"
+              autoComplete="email"
+              fullWidth
+              margin="normal"
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "&.Mui-focused fieldset": {
+                    borderColor: "black",
+                  },
+                },
+                width: "100%",
+              }}
+            />
+            <TextField
+              id="outlined-multiline-static"
+              label="Message"
+              multiline
+              rows={4}
+              defaultValue="Message"
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "&.Mui-focused fieldset": {
+                    borderColor: "black",
+                  },
+                },
+                width: "100%",
+              }}
+            />
+            <Button
+              type="submit"
+              variant="contained"
+              fullWidth
+              sx={{
+                mt: 2,
+                py: 1.5,
+                background: "linear-gradient(to right, #bcaaa4, #6d4c41)",
+                color: "white",
+                "&:hover": {
+                  background: "linear-gradient(to right, #6d4c41, #bcaaa4)",
+                  color: "white",
+                },
+              }}
+            >
+              Send
+            </Button>
           </form>
         </div>
       </div>

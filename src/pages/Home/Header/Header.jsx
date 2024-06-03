@@ -8,6 +8,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import name from "../../../assets/name.png";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [openNav, setOpenNav] = React.useState(false);
@@ -71,6 +72,23 @@ const Header = () => {
         >
           Contact
         </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 text-base font-bold"
+      >
+        <NavLink
+          to="/login"
+          spy={true}
+          smooth={true}
+          offset={-200}
+          duration={700}
+          className="flex cursor-pointer items-center"
+        >
+          Profile
+        </NavLink>
       </Typography>
     </ul>
   );
