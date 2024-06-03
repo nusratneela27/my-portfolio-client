@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Box, TextField, Button } from "@mui/material";
 import loginBG from "../../assets/loginBG.avif";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
+  const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
+
+  const onSubmit = (data) => {
+    signIn(data.email, data.password)
+      .then((result) => {
+        const loggedUser = result.user;
+        // console.log(loggedUser);
+        navigate("/dashboard");
+        toast.success("Login Successfully");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="relative w-full h-screen">
       <img
@@ -16,7 +37,7 @@ const Login = () => {
           sx={{ boxShadow: 3 }}
         >
           <h1 className="text-2xl font-bold mb-4 text-center">Login</h1>
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <TextField
               id="email"
               label="Email"
@@ -32,6 +53,7 @@ const Login = () => {
                 },
                 width: "100%",
               }}
+              {...register("email", { required: true })}
             />
             <TextField
               id="password"
@@ -48,6 +70,7 @@ const Login = () => {
                 },
                 width: "100%",
               }}
+              {...register("password", { required: true })}
             />
             <Button
               type="submit"

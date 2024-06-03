@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useEffect } from "react";
 import AOS from "aos";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { CiMail } from "react-icons/ci";
 import { FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { Button, TextField } from "@mui/material";
@@ -143,7 +143,6 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <Toaster />
     </section>
   );
 };
