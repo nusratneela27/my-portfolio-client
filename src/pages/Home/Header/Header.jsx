@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-scroll";
 import "./Header.css";
 import {
@@ -9,9 +9,11 @@ import {
 } from "@material-tailwind/react";
 import name from "../../../assets/name.png";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Header = () => {
   const [openNav, setOpenNav] = React.useState(false);
+  const { user } = useContext(AuthContext);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -79,16 +81,29 @@ const Header = () => {
         color="blue-gray"
         className="p-1 text-base font-bold"
       >
-        <NavLink
-          to="/login"
-          spy={true}
-          smooth={true}
-          offset={-200}
-          duration={700}
-          className="flex cursor-pointer items-center"
-        >
-          Profile
-        </NavLink>
+        {user ? (
+          <NavLink
+            to="/dashboard"
+            spy={true}
+            smooth={true}
+            offset={-200}
+            duration={700}
+            className="flex cursor-pointer items-center"
+          >
+            Dashboard
+          </NavLink>
+        ) : (
+          <NavLink
+            to="/login"
+            spy={true}
+            smooth={true}
+            offset={-200}
+            duration={700}
+            className="flex cursor-pointer items-center"
+          >
+            Profile
+          </NavLink>
+        )}
       </Typography>
     </ul>
   );
