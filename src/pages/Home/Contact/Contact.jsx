@@ -113,7 +113,6 @@ const Contact = () => {
               label="Message"
               multiline
               rows={4}
-              defaultValue="Message"
               sx={{
                 "& .MuiOutlinedInput-root": {
                   "&.Mui-focused fieldset": {
