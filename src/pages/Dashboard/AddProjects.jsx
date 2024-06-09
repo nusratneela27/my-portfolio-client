@@ -1,11 +1,23 @@
 import { useForm } from "react-hook-form";
 import { TextField, Button, Box } from "@mui/material";
+import toast from "react-hot-toast";
 
 const AddProjects = () => {
   const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data) => {
-    // console.log(data);
+  const onSubmit = (addProject) => {
+    // console.log(addProject);
+    fetch("http://localhost:5000/add-project", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(addProject),
+    })
+      .then((res) => res.json())
+      .then(() => {
+        toast.success("Project added");
+      });
   };
 
   return (
@@ -25,14 +37,14 @@ const AddProjects = () => {
             variant="standard"
             margin="normal"
             label="Image URL"
-            {...register("Image URL", { required: true })}
+            {...register("imageSrc", { required: true })}
           />
           <TextField
             fullWidth
             variant="standard"
             margin="normal"
             label="Title"
-            {...register("Title", { required: true })}
+            {...register("title", { required: true })}
           />
           <TextField
             fullWidth
@@ -41,7 +53,7 @@ const AddProjects = () => {
             label="Description"
             multiline
             rows={3}
-            {...register("Description", { required: true })}
+            {...register("description", { required: true })}
           />
           <TextField
             fullWidth
@@ -64,15 +76,15 @@ const AddProjects = () => {
             variant="standard"
             margin="normal"
             label="GitHub Link"
-            {...register("githublink", { required: true })}
+            {...register("githubLink", { required: true })}
           />
           <TextField
             fullWidth
             variant="standard"
             margin="normal"
             label="Live Site Link"
-            name="livesitelink"
-            {...register("livesitelink", { required: true })}
+            name="liveSiteLink"
+            {...register("liveSiteLink", { required: true })}
           />
           <Button
             type="submit"

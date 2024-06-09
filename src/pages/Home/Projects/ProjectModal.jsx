@@ -40,11 +40,6 @@ const ProjectModal = ({ open, handleClose, project }) => {
           </button>
         </div>
         <div style={flexContainer}>
-          <img
-            src={project.imageSrc}
-            alt={project.title}
-            className="mb-4 w-full h-auto"
-          />
           <Typography id="modal-details" className="text-justify">
             {project.details}
           </Typography>

@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Home To Go",
+    "description": "A MERN Stack project where guests can pick any rooms added by the host and the host can add rooms with proper information description, location, and price.",
+    "details": "A MERN Stack project. It is used React JS, React Router, TailWind, React-Hook-From, Express Js, node Js, and Tanstack query Jwt token to ensure that only authorized users could access certain features. This project has three different dashboards with admin, host, and guest. Have customized dashboards with spinner and also mobile responsive. I utilized MongoDB as the database to store rooms which post, host information, user profiles set on the database as role guest or host, and payment system. Stripe payment method for room book. With Express.js on the backend, Created a RESTful API that facilitated smooth communication between the front end and the database.",
+    "technologies": "React JS, React Router, TailWind, Express Js, node Js, Tanstack query, JWT, Axios, Stripe",
+    "githubLink": "https://github.com/nusratneela27/Home-Rent-Service",
+    "liveSiteLink": "https://project-6bc24.web.app/",
+    "imageSrc": "https://example.com/home-image.jpg"
+  },
+  {
+    "title": "Learning Camp",
+    "description": "A MERN Stack project where Users can pick any classes and add them to the dashboard. They can pick multiple classes at a time. There is also an admin, Instructor, and student dashboard.",
+    "details": "A MERN Stack project. It is used React JS, React Router, TailWind, React-Hook-From, Express Js, node Js, and Tanstack query Jwt token to ensure that only authorized users could access certain features. This project has three different dashboards with admin, Instructor, and user. Have customized dashboards with spinner and also mobile responsive. I utilized MongoDB as the database to store class which post by instructor, class information, admin profiles set on the database as role instructor, and payment system. Stripe payment method for book classes. With Express.js on the backend, Created a RESTful API that facilitated smooth communication between the front end and the database.",
+    "technologies": "React JS, React Router, TailWind, React-Hook-From, Express Js, node Js, Tanstack query",
+    "githubLink": "https://github.com/nusratneela27/Learning-camp",
+    "liveSiteLink": "https://learning-camp-7ae5f.web.app/",
+    "imageSrc": "https://example.com/learning-camp-image.jpg"
+  },
+  {
+    "title": "Toys Projects",
+    "description": "A MERN project. Users can choose any toy and add it to the dashboard. Only login users can add new toys, update the toy for the page and see all the bookings of toys.",
+    "details": "A MERN Stack project. It is used React JS, React Router, TailWind, Express Js, node Js, and Jwt token to ensure that only authorized users could access certain features. This project has all toys data, update toy and add a toys. Have customized spinner and also mobile responsive. I utilized MongoDB as the database to store toys which post by users. With Express.js on the backend, Created a RESTful API that facilitated smooth communication between the front end and the database.",
+    "technologies": "React JS, React Router, React Bootstrap, React-Hook-From, Express Js, node Js",
+    "githubLink": "https://github.com/nusratneela27/Toys-marketplace",
+    "liveSiteLink": "https://toys-project-3b9a3.web.app/",
+    "imageSrc": "https://example.com/toys-project-image.jpg"
+  }
+]

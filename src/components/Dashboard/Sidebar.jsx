@@ -71,6 +71,15 @@ const Sidebar = () => {
           }}
         >
           <List>
+            <NavLink to={"all-projects"}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <GoProjectSymlink />
+                </ListItemIcon>
+                All projects
+              </ListItemButton>
+            </NavLink>
+
             <NavLink to={"add-projects"}>
               <ListItemButton>
                 <ListItemIcon>
