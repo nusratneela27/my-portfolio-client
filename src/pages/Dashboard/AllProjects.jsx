@@ -10,6 +10,7 @@ import {
   TableRow,
 } from "@mui/material";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { MdDelete } from "react-icons/md";
 import { MdOutlineSystemUpdateAlt } from "react-icons/md";
 
@@ -17,10 +18,53 @@ const AllProjects = () => {
   const [projectData, setProjectData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/projects")
+    fetch(`${import.meta.env.VITE_backend_api}/projects`)
       .then((res) => res.json())
       .then((data) => setProjectData(data));
   }, []);
+
+  const handleDelete = (projectId) => {
+    toast(
+      (t) => (
+        <span>
+          Are you sure you want to delete this project?
+          <Button
+            color="secondary"
+            onClick={() => {
+              fetch(
+                `${import.meta.env.VITE_backend_api}/projects/${projectId}`,
+                {
+                  method: "DELETE",
+                }
+              )
+                .then((res) => {
+                  if (res.ok) {
+                    setProjectData((prevData) =>
+                      prevData.filter((project) => project._id !== projectId)
+                    );
+                    toast.dismiss(t.id);
+                    toast.success("Project deleted successfully!");
+                  } else {
+                    toast.dismiss(t.id);
+                    toast.error("Failed to delete project.");
+                  }
+                })
+                .catch(() => {
+                  toast.dismiss(t.id);
+                  toast.error("An error occurred. Please try again.");
+                });
+            }}
+          >
+            Yes
+          </Button>
+          <Button onClick={() => toast.dismiss(t.id)}>No</Button>
+        </span>
+      ),
+      {
+        duration: Infinity,
+      }
+    );
+  };
 
   return (
     <div className="flex justify-center items-center h-screen">
@@ -55,7 +99,12 @@ const AllProjects = () => {
                   </TableCell>
                   <TableCell align="center">{project.title}</TableCell>
                   <TableCell align="center">
-                    <IconButton aria-label="delete" size="large" color="error">
+                    <IconButton
+                      aria-label="delete"
+                      size="large"
+                      color="error"
+                      onClick={() => handleDelete(project._id)}
+                    >
                       <MdDelete fontSize="large" />
                     </IconButton>
                   </TableCell>

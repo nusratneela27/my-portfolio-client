@@ -7,7 +7,7 @@ const AddProjects = () => {
 
   const onSubmit = (addProject) => {
     // console.log(addProject);
-    fetch("http://localhost:5000/add-project", {
+    fetch(`${import.meta.env.VITE_backend_api}/add-project`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
