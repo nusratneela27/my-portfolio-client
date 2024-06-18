@@ -8,11 +8,13 @@ import DashboardLayout from "../layout/DashboardLayout";
 import AddProjects from "../pages/Dashboard/AddProjects";
 import AddBlogs from "../pages/Dashboard/AddBlogs";
 import AllProjects from "../pages/Dashboard/AllProjects";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -24,46 +26,46 @@ export const router = createBrowserRouter([
     path: "/login",
     element: <Login></Login>,
   },
-  {
-    path: "/dashboard",
-    element: (
-      <PrivateRoute>
-        <DashboardLayout></DashboardLayout>
-      </PrivateRoute>
-    ),
-    children: [
-      {
-        path: "/dashboard",
-        element: (
-          <PrivateRoute>
-            <Dashboard></Dashboard>
-          </PrivateRoute>
-        ),
-      },
-      {
-        path: "/dashboard/all-projects",
-        element: (
-          <PrivateRoute>
-            <AllProjects></AllProjects>
-          </PrivateRoute>
-        ),
-      },
-      {
-        path: "/dashboard/add-projects",
-        element: (
-          <PrivateRoute>
-            <AddProjects></AddProjects>
-          </PrivateRoute>
-        ),
-      },
-      {
-        path: "/dashboard/add-blogs",
-        element: (
-          <PrivateRoute>
-            <AddBlogs></AddBlogs>
-          </PrivateRoute>
-        ),
-      },
-    ],
-  },
+  // {
+  //   path: "/dashboard",
+  //   element: (
+  //     <PrivateRoute>
+  //       <DashboardLayout></DashboardLayout>
+  //     </PrivateRoute>
+  //   ),
+  //   children: [
+  //     {
+  //       path: "/dashboard",
+  //       element: (
+  //         <PrivateRoute>
+  //           <Dashboard></Dashboard>
+  //         </PrivateRoute>
+  //       ),
+  //     },
+  //     {
+  //       path: "/dashboard/all-projects",
+  //       element: (
+  //         <PrivateRoute>
+  //           <AllProjects></AllProjects>
+  //         </PrivateRoute>
+  //       ),
+  //     },
+  //     {
+  //       path: "/dashboard/add-projects",
+  //       element: (
+  //         <PrivateRoute>
+  //           <AddProjects></AddProjects>
+  //         </PrivateRoute>
+  //       ),
+  //     },
+  //     {
+  //       path: "/dashboard/add-blogs",
+  //       element: (
+  //         <PrivateRoute>
+  //           <AddBlogs></AddBlogs>
+  //         </PrivateRoute>
+  //       ),
+  //     },
+  //   ],
+  // },
 ]);

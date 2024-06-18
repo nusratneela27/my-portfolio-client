@@ -81,7 +81,7 @@ const Header = () => {
         color="blue-gray"
         className="p-1 text-base font-bold"
       >
-        {user ? (
+        {/* {user ? (
           <NavLink
             to="/dashboard"
             spy={true}
@@ -103,7 +103,7 @@ const Header = () => {
           >
             Profile
           </NavLink>
-        )}
+        )} */}
       </Typography>
     </ul>
   );

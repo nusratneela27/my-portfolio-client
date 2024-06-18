@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -8,26 +8,41 @@ import { FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { Button, TextField } from "@mui/material";
 
 const Contact = () => {
-  const form = useRef();
-  const sendEmail = (e) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // EmailJs service ID, template ID, public key
+    const serviceId = "service_wr6zhjh";
+    const templateId = "template_bhogqnp";
+    const publicKey = "LxJqS-XXxqgol8RKC";
+
+    // new object
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: "Nusrat Jahan",
+      message: message,
+    };
+
+    // console.log(templateParams);
+
+    // send email to emailjs
     emailjs
-      .sendForm(
-        "service_kuzj538",
-        "template_bhogqnp",
-        form.current,
-        "LxJqS-XXxqgol8RKC"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        toast.success("Email send"),
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then((res) => {
+        // console.log("email sent", res);
+        toast.success("email send");
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((err) => {
+        console.log("error sending mail", err);
+      });
   };
 
   useEffect(() => {
@@ -72,8 +87,7 @@ const Contact = () => {
           data-aos-easing="ease-in-sine"
         >
           <form
-            ref={form}
-            onSubmit={sendEmail}
+            onSubmit={handleSubmit}
             className=" flex flex-col gap-5 rounded-3xl p-10 bg-white bg-opacity-30 shadow-lg"
           >
             <TextField
@@ -83,6 +97,8 @@ const Contact = () => {
               autoComplete="name"
               fullWidth
               margin="normal"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               sx={{
                 "& .MuiOutlinedInput-root": {
                   "&.Mui-focused fieldset": {
@@ -99,6 +115,8 @@ const Contact = () => {
               autoComplete="email"
               fullWidth
               margin="normal"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               sx={{
                 "& .MuiOutlinedInput-root": {
                   "&.Mui-focused fieldset": {
@@ -113,6 +131,8 @@ const Contact = () => {
               label="Message"
               multiline
               rows={4}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               sx={{
                 "& .MuiOutlinedInput-root": {
                   "&.Mui-focused fieldset": {
